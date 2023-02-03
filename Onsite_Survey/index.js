@@ -52,6 +52,6 @@ function sendData() {
     mobile_error_text.innerText = "You have entered an invalid Mobile number.";
   } else {
     localStorage.setItem("data", JSON.stringify(storeData));
-    window.location.href = "../Onsite_Survey/page_2/displayPage.html";
+    window.location.href = "./displayPage.html";
   }
 }
