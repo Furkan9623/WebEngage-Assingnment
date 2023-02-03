@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main-div {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 5px; */
+  margin: 80px auto;
+}
+
+.left-div {
+  width: 600px;
+  box-sizing: border-box;
+}
+.left-div > img {
+  width: 100%;
+}
+
+.right-div {
+  /* border: 2px solid green; */
+  text-align: center;
+
+  width: 500px;
+  padding: 20px;
+  margin-top: 12%;
+}
+.right-div > img {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(97, 94, 94);
+  border-radius: 5px;
+  color: white;
+}
+.input-div > input {
+  padding-left: 20px;
+}
+.input-div > input,
+#mobileValue {
+  width: 100%;
+  
+  border: none;
+  outline: none;
+  height: 48px;
+  font-size: 20px;
+
+}
+.input-div {
+  margin-top: 15px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+
+/* required text design  */
+#required-email,
+#required-mobile {
+  position: absolute;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+  right: 20%;
+  margin-top: 18px;
+  /* margin-right: 5px; */
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* media query  */
+
+@media only screen and (max-width: 600px) {
+  #main-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left-div {
+    width: 400px;
+  }
+  .right-div {
+    text-align: center;
+    width: 400px;
+  }
+  .input-div > input,
+  #mobileValue {
+    width: 200px;
+  }
+  .right-div > img {
+    width: 80%;
+  }
+  #required-email,
+  #required-mobile {
+    right: -28%;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 396px) {
+  #main-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left-div {
+    width: 350px;
+  }
+  .right-div {
+    text-align: center;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  #main-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left-div {
+    width: 300px;
+  }
+  .right-div {
+    text-align: center;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 295px) {
+  #main-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left-div {
+    width: 250px;
+  }
+  .right-div {
+    text-align: center;
+    width: 250px;
+  }
+  .input-div > input,
+  #mobileValue {
+    width: 150px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/css/intlTelInput.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/js/intlTelInput-jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <title>Onsite Survey</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="main-div">
+      <div class="left-div">
+        <img src="./image/avatar.jpg.jpg" alt="avatar" />
+      </div>
+      <div class="right-div">
+        <img src="./image/logo.jpg.png" alt="logo" />
+        <h1>Get a FREE</h1>
+        <h4>Consultation with an Expert</h4>
+        <form>
+          <div class="input-div">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="emailValue"
+              required
+            />
+            <!-- <span id="required-email">Required Field</span> -->
+          </div>
+          <span class="error-msg" id="error-email"></span>
+
+          <div class="input-div">
+            <input
+              id="mobileValue"
+              type="tel"
+              placeholder="Enter mobile"
+              name="phone"
+            />
+            <!-- <span id="required-mobile" class="requiredMbl">Required Field</span> -->
+          </div>
+
+          <span class="error-msg" id="error-number"></span>
+
+          <button id="form">TALK TO US ➝</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(function () {
+      var code = "+91"; // Assigning value from model.
+      $("#mobileValue").val(code);
+      $("#mobileValue").intlTelInput({
+        autoHideDialCode: true,
+        autoPlaceholder: "ON",
+        dropdownContainer: document.body,
+        formatOnDisplay: true,
+        hiddenInput: "full_number",
+        initialCountry: "auto",
+        nationalMode: true,
+        placeholderNumberType: "MOBILE",
+        preferredCountries: ["IN"],
+        separateDialCode: true,
+      });
+      // $("#form").on("click", function () {
+      //   var code = $("#mobileValue").intlTelInput(
+      //     "getSelectedCountryData"
+      //   ).dialCode;
+      //   var phoneNumber = $("#mobileValue").val();
+      //   var name = $("#mobileValue").intlTelInput(
+      //     "getSelectedCountryData"
+      //   ).name;
+      //   alert(
+      //     "Country Code : " +
+      //       code +
+      //       "\nPhone Number : " +
+      //       phoneNumber +
+      //       "\nCountry Name : " +
+      //       name
+      //   );
+      // });
+    });
+  </script>
+</html>
+<script src="index.js"></script>
